@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Florería Cuatro Pétalos</title>
+  <style>
+    :root{
+      --bg:#fffaf6;
+      --card:#ffffff;
+      --accent:#b23a62;
+      --text:#333;
+      --muted:#6b6b6b;
+    }
+    body{
+      margin:0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg,#fffaf6 0%, #ffffff 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background: var(--card);
+      padding:24px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .logo{
+      width:64px;height:64px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#ffd6e0,#ffe6f0);
+      font-weight:700;color:var(--accent);
+      box-shadow:0 2px 6px rgba(178,58,98,0.12);
+    }
+    h1{ margin:0; font-size:20px; letter-spacing:0.4px;}
+    p.lead{ margin:0; color:var(--muted); font-size:13px; }
+    .container{
+      max-width:1100px;
+      margin:28px auto;
+      padding:0 18px 80px;
+    }
+
+    /* grid de productos */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:20px;
+      margin-top:18px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      text-align:center;
+    }
+    .card img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:10px;
+      display:block;
+      margin-bottom:10px;
+    }
+    .name{ font-weight:600; margin:6px 0 4px; }
+    .price{ color:var(--accent); font-weight:700; font-size:18px; }
+    .meta{ color:var(--muted); font-size:13px; margin-top:6px; }
+
+    /* contacto */
+    .contact{
+      margin-top:30px;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      background:linear-gradient(90deg,#fff,#fffaf8);
+      padding:18px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.03);
+    }
+    .contact .left{ display:flex; gap:16px; align-items:center; }
+    .contact .phone, .contact .email{
+      display:flex; flex-direction:column;
+    }
+    .contact strong{ color:var(--accent); font-size:16px; }
+    footer{ margin-top:18px; text-align:center; color:var(--muted); font-size:13px; }
+
+    /* pequeños detalles */
+    .badge{
+      background:var(--accent);
+      color:#fff;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      box-shadow:0 4px 12px rgba(178,58,98,0.12);
+    }
+
+    /* responsive tweaks */
+    @media(max-width:520px){
+      .brand h1{ font-size:18px; }
+      .card img{ height:150px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">4P</div>
+      <div>
+        <h1>Florería Cuatro Pétalos</h1>
+        <p class="lead">Flores frescas | Entregas locales | Amor en cada ramo</p>
+      </div>
+    </div>
+    <div class="badge">¡Promociones disponibles!</div>
+  </header>
+
+  <main class="container">
+    <h2>Catálogo</h2>
+    <p class="meta">Haz clic en la imagen para ver el detalle. Precios indicados en pesos ($).</p>
+
+    <section class="grid" aria-label="Catálogo de flores">
+
+      <!-- 1 Tulipán -->
+      <article class="card">
+        <!-- Reemplaza la URL src por la imagen real del tulipán cuando la tengas -->
+        <img src="https://via.placeholder.com/800x500.png?text=Tulip%C3%A1n" alt="Tulipán">
+        <div class="name">Tulipán</div>
+        <div class="price">$8.200</div>
+        <div class="meta">Precio por unidad</div>
+      </article>
+
+      <!-- 2 Rosa -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Rosa" alt="Rosa">
+        <div class="name">Rosa</div>
+        <div class="price">$2.000</div>
+        <div class="meta">Precio por unidad</div>
+      </article>
+
+      <!-- 3 Girasol -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Girasol" alt="Girasol">
+        <div class="name">Girasol</div>
+        <div class="price">$5.000</div>
+        <div class="meta">Precio por unidad</div>
+      </article>
+
+      <!-- 4 Clavel -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Clavel" alt="Clavel">
+        <div class="name">Clavel</div>
+        <div class="price">$1.100</div>
+        <div class="meta">Precio por unidad</div>
+      </article>
+
+      <!-- 5 Gerbera -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Gerbera" alt="Gerbera">
+        <div class="name">Gerbera</div>
+        <div class="price">$4.000</div>
+        <div class="meta">Precio por unidad</div>
+      </article>
+
+      <!-- 6 Ramo 40 rosas -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Ramo+40+Rosas" alt="Ramo de 40 rosas">
+        <div class="name">Ramo de 40 rosas</div>
+        <div class="price">$150.000</div>
+        <div class="meta">Ideal para eventos y celebraciones</div>
+      </article>
+
+      <!-- 7 Ramo 12 Gerbera rojas -->
+      <article class="card">
+        <img src="https://via.placeholder.com/800x500.png?text=Ramo+12+Gerberas+Rojas" alt="Ramo de 12 gerberas rojas">
+        <div class="name">Ramo de 12 Gerbera (rojas)</div>
+        <div class="price">$135.000</div>
+        <div class="meta">Ramo premium</div>
+      </article>
+
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" aria-label="Contacto florería">
+      <div class="left">
+        <div>
+          <h3 style="margin:0 0 6px 0;">Contacto</h3>
+          <p style="margin:0;color:var(--muted);font-size:14px;">Escribinos o llamanos para pedidos y consultas.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="email">
+          <strong>Email</strong>
+          <span class="meta">FloreríaCuatroPetalos@gmail.com</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="phone">
+          <strong>Teléfono</strong>
+          <span class="meta">+54 9 11 4567-8901</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Dirección de tienda (opcional): Av. Ejemplo 123 — Ciudad. | Horarios: Lun-Sab 9:00–19:00</p>
+    </footer>
+  </main>
+</body>
+</html>
